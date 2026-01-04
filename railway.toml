@@ -1,7 +1,6 @@
 [build]
 builder = "dockerfile"
-dockerfilePath = "Dockerfile"
-buildContext = "tts-api"
+dockerfilePath = "tts-api/Dockerfile"
 
 [deploy]
 startCommand = "python app.py"
