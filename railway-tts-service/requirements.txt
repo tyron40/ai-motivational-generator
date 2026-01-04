@@ -1,0 +1,11 @@
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+requests==2.31.0
+pydantic==2.5.0
+# gTTS - Google Text-to-Speech (simple, reliable, Python 3.12 compatible)
+gTTS==2.5.0
+pydub==0.25.1
+# For audio processing
+numpy>=1.24.0
+soundfile==0.12.1
