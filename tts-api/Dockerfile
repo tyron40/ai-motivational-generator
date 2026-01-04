@@ -18,9 +18,12 @@ RUN apt-get update && apt-get install -y \
 # Clone NeuTTS Air repository
 RUN git clone https://github.com/neuphonic/neutts-air.git
 
-# Copy requirements and install Python dependencies
-COPY tts-api/requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Install NeuTTS Air dependencies from the cloned repo
+RUN pip install --no-cache-dir -r neutts-air/requirements.txt
+
+# Copy and install our API requirements (FastAPI, uvicorn, etc.)
+COPY tts-api/requirements.txt ./api-requirements.txt
+RUN pip install --no-cache-dir -r api-requirements.txt
 
 # Copy application code
 COPY tts-api/app.py .
