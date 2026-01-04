@@ -19,11 +19,11 @@ RUN apt-get update && apt-get install -y \
 RUN git clone https://github.com/neuphonic/neutts-air.git
 
 # Copy requirements and install Python dependencies
-COPY requirements.txt .
+COPY tts-api/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
-COPY app.py .
+COPY tts-api/app.py .
 
 # Create temp directory for audio files
 RUN mkdir -p /tmp
