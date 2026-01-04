@@ -6,3 +6,5 @@ dockerfilePath = "tts-api/Dockerfile"
 startCommand = "python app.py"
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 10
+
+# Trigger deployment
