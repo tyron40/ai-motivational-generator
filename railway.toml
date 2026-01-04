@@ -1,6 +1,6 @@
 [build]
 builder = "dockerfile"
-dockerfilePath = "tts-api/Dockerfile"
+dockerfilePath = "Dockerfile"
 buildContext = "tts-api"
 
 [deploy]
